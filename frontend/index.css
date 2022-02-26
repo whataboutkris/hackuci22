@@ -17,8 +17,6 @@ body {
     text-decoration: none;
     font-size: 17px;
   }
-
-
   
   .topnav a:hover {
     background-color: #ddd;
@@ -74,9 +72,40 @@ body {
     }
   }
 
+  .image{
+    position: relative; 
+    bottom: -150px;
+  }
 
 
+  * {
+    font-size: 1.2rem;
+  }
+  .input-wrapper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:150px;
+    background: #464545;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0.25rem 0.25rem 0rem #b3b3b3;
+  }
+  
+  input {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 600px;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+  }
 
+  
 
 
 
