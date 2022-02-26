@@ -9,7 +9,6 @@ categories = {'books': book_genres, 'car': car, 'shoes': shoes, 'laptop': laptop
 
 def key_generator(key_words):
     key_phrases = []
-    item_list = []
 
     item = key_words[0: (key_words.find(' '))]
     print(item)
