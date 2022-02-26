@@ -4,7 +4,8 @@
 
 <html lang="en">
     <head>
-        <link  rel="stylesheet" href="web.css">
+        <link  rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
         <title>DealMaster</title>
         <style>
             .center {
@@ -27,23 +28,23 @@
       </body>
 
       <div class="post-content">
-        <div class="center">
-          <h1>DealMaster</h2>
+        <div class="center image">
+          <h1><img src="Dealmaster.png" alt="Title Page!"></h2>
         </div>
       </div>
 
     <body>
         <div class = "center">
 
-            insert brief explanation here
+            <!---placeholder for info-->
 
         </div>
 
-        <div class="center search-container">
-              <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <input type="button" value="Find a Deal" onclick="submitSearch();">
-              </form>
+        <div class="input-wrapper">
+          <form action="search.html"> <!--usually php for searching from database-->
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input type="text" class="input-search" placeholder="Type to Search...">
+          </form>
         </div>
 </body>
 </html>
