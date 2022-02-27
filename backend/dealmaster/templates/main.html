@@ -17,12 +17,8 @@
 
         </div>
 
-        <div class="input-wrapper">
-          <form action="search.html"> <!--usually php for searching from database-->
-          <button class="btn-search"><i class="fas fa-search"></i></button>
-          <input type="text" class="input-search" placeholder="Type to Search...">
-          </form>
-        </div>
+        {% include 'search.html' %}
+         
     </body>
 
 {% endblock content%}
