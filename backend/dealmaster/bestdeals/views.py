@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import search_engine
+from . import search_engine, key_dics
 
 
 # Create your views here.
@@ -21,4 +21,10 @@ def search_results(request):
 
 
 def laptop_view(request):
-    return render(request, 'laptops.html')
+    context = {'laptops': key_dics.laptop}
+    return render(request, 'laptops.html', context)
+
+
+def bestdeals_view(request):
+    context = {}
+    return render(request, 'bestdeals.html', context)
