@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 
 <header class="header">
+<!--        <a href="{% url 'home' %}" class="header__logo">-->
+<!--            <img src="{% static 'pics/login.png' %}" alt="Login Logo" />-->
+<!--        </a>-->
+
       <nav>
         <ul>
           <div class = "topnav center">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
             <a href="#login">Login</a>
-          <ul>
           </div>
+        <ul>
       </nav>
 
 </header>

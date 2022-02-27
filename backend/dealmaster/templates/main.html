@@ -11,19 +11,14 @@
       </div>
 
     <body>
-        <div class = "center">
-
-            <!---placeholder for info-->
-
-        </div>
 
         {% include 'search.html' %}
 
         <center>
-            <a href="{% url 'laptops' %}">laptop</a>
-            <a href="{% url 'cars' %}">car</a>
-            <a href="{% url 'accessories' %}">accessories</a>
-            <a href="{% url 'books' %}">books</a>
+            <a  href="{% url 'laptops' %}"><img src="{% static 'pics/laptop.png' %}"></a>
+            <a href="{% url 'cars' %}"><img src="{% static 'pics/car.png' %}"></a>
+            <a href="{% url 'accessories' %}"><img src="{% static 'pics/school.png' %}"></a>
+            <a href="{% url 'books' %}"><img src="{% static 'pics/books.png' %}"></a>
         </center>
     </body>
 
