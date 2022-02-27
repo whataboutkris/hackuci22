@@ -1,41 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link  rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-        <title>DealMaster</title>
-        <style>
-            .center {
-              text-align: center;
-            }
-            </style>
-    </head>
-  
-      <body>
-        <header>
-          <nav>
-            <ul>
-              <div class = "topnav center">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="#login">Login</a>
-              <ul>
-          </nav>
-        <header>
-      </body>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
 
-      <div class="post-content">
-        <div class="center image">
-          <h1><img src="Dealmaster.png" alt="Title Page!"></h2>
-        </div>
-      </div>
-
-    <body>
 
         <div class="input-wrapper">
-          <form action="search.html"> <!--usually php for searching from database-->
+          <form action="{% url 'search' %}"> <!--usually php for searching from database-->
           <button class="btn-search"><i class="fas fa-search"></i></button>
-          <input type="text" class="input-search" placeholder="Type to Search...">
+          <input type="text" name="search_querry"  class="input-search"
+                 value={{search_query}} placeholder="Type to Search...">
+
+              <!-- add request for backends -->
           </form>
         </div>
 
@@ -45,5 +20,5 @@
             
 
         </div>
-</body>
-</html>
+
+{% endblock content %}

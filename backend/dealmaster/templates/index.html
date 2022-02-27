@@ -2,7 +2,7 @@
 
 {% load static %}
 
-<script src="index_code.js"></script>
+<script src="{% static 'js/index_code.js' %}"></script>
 
 <html lang="en">
     <head>
@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
         <title>DealMaster</title>
         <style>
@@ -20,37 +20,11 @@
             </style>
     </head>
 
-      <body>
-        <header>
-          <nav>
-            <ul>
-              <div class = "topnav center">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="#login">Login</a>
-              <ul>
-          </nav>
-        <header>
-      </body>
 
-      <div class="post-content">
-        <div class="center image">
-          <h1><img src="Dealmaster.png" alt="Title Page!"></h2>
-        </div>
-      </div>
+    {% include 'navbar.html' %}
 
-    <body>
-        <div class = "center">
+    {% block content %}
 
-            <!---placeholder for info-->
 
-        </div>
-
-        <div class="input-wrapper">
-          <form action="search.html"> <!--usually php for searching from database-->
-          <button class="btn-search"><i class="fas fa-search"></i></button>
-          <input type="text" class="input-search" placeholder="Type to Search...">
-          </form>
-        </div>
-</body>
+    {% endblock content %}
 </html>
