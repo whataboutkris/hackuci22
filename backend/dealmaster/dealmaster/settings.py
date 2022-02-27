@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # User Apps
     'bestdeals.apps.BestdealsConfig',
     'users.apps.UsersConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dealmaster.urls'

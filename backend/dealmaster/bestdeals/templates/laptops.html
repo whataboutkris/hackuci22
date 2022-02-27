@@ -5,9 +5,10 @@
 <body>
     <div class = "center">
 
-        <form action="{% url 'bestdeals' %}" method="get">
+        <form action="{% url 'bestdeals' %}" method="POST">
+            {% csrf_token %}
             {% for brand in laptops %}
-            <input type="submit" value="{{brand}}" />
+            <input type="submit" value="{{brand}}" name="{{brand}}}" />
             {% endfor %}
         </form>
 

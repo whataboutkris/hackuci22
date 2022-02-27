@@ -21,12 +21,13 @@ def search_results(request):
 
 
 def cars_view(request):
+
     context = {'cars': key_dics.car}
     return render(request, 'cars.html', context)
 
 
 def laptops_view(request):
-    context = {'laptops': key_dics.laptop}
+    context = {'laptops' : key_dics.laptop}
     return render(request, 'laptops.html', context)
 
 
@@ -42,4 +43,5 @@ def books_view(request):
 
 def bestdeals_view(request):
     context = {}
+
     return render(request, 'bestdeals.html', context)
