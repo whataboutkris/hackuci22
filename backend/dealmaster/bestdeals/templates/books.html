@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 {% extends 'index.html' %}
-
+{% load static %}
 {% block content %}
+<center>
+    <div class = "image">
+        <img src="{% static 'pics/books_b.png' %}" alt="books" width="100" height="100">
+        </a>
+    </div>
+</center>
+
+
 <body>
     <div class = "center">
-
         <form action="{% url 'bestdeals' %}" method="get">
+            {% csrf_token %}
             {% for genre in books %}
-            <input type="submit" value="{{genre}}" />
+                <p><input type="submit" value="{{genre}}" /></p>
             {% endfor %}
         </form>
 
