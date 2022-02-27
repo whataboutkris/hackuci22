@@ -5,7 +5,11 @@
 <body>
     <div class = "center">
 
-        laptop page!
+        <form action="{% url 'bestdeals' %}" method="get">
+            {% for genre in books %}
+            <input type="submit" value="{{genre}}" />
+            {% endfor %}
+        </form>
 
     </div>
 
