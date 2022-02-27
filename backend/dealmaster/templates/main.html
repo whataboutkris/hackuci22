@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+     <div class="post-content">
+        <div class="center image">
+          <h1><img src="{% static 'pics/Dealmaster.png' %}" alt="Title Page!"></h1>
+        </div>
+      </div>
+
+    <body>
+        <div class = "center">
+
+            <!---placeholder for info-->
+
+        </div>
+
+        <div class="input-wrapper">
+          <form action="search.html"> <!--usually php for searching from database-->
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input type="text" class="input-search" placeholder="Type to Search...">
+          </form>
+        </div>
+    </body>
+
+{% endblock content%}

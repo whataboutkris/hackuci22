@@ -4,7 +4,7 @@ from . import search_engine
 
 # Create your views here.
 def home_view(request):
-    return render(request, 'index.html')
+    return render(request, 'main.html')
 
 
 def about_view(request):
