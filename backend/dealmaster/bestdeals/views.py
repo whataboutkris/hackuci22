@@ -18,3 +18,7 @@ def search_results(request):
         return render(request, 'search-results.html', context)
     else:
         return render(request, 'main.html')
+
+
+def laptop_view(request):
+    return render(request, 'laptops.html')
