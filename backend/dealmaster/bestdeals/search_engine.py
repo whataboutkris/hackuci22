@@ -65,3 +65,20 @@ def search_best_deal(query):
             break
 
     return links
+
+
+# test1 = 'car toyota'
+# test2 = 'books'
+# test3 = 'nothing'
+#
+#
+# result1 = key_generator(test1)
+# result_search = search_best_deal('car toyota corolla best price')
+# result3 = search_best_deal(key_generator(test1))
+#
+# print('Test 1 -------------')
+# print(result1, '\n\n')
+# print('Test 2 -------------')
+# print(result_search, '\n\n')
+# print('Test 3 -------------')
+# print(result3, '\n\n')
