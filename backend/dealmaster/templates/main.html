@@ -13,12 +13,26 @@
     <body>
 
         {% include 'search.html' %}
-
         <center>
-            <a  href="{% url 'laptops' %}"><img src="{% static 'pics/laptop.png' %}"></a>
-            <a href="{% url 'cars' %}"><img src="{% static 'pics/car.png' %}"></a>
-            <a href="{% url 'accessories' %}"><img src="{% static 'pics/school.png' %}"></a>
-            <a href="{% url 'books' %}"><img src="{% static 'pics/books.png' %}"></a>
+        <div class = "image">
+              <a href="{% url 'laptops' %}">
+              <img src="{% static 'pics/laptop_b.png' %}" alt="Laptops" width="280" height="280">
+              </a>
+
+              <a href="{% url 'cars' %}">
+              <img src="{% static 'pics/car_b.png' %}" alt="Cars" width="280" height="280">
+              </a>
+
+              <a href="{% url 'books' %}">
+              <img src="{% static 'pics/books_b.png' %}" alt="Books" width="280" height="280"> >
+              </a>
+
+              <a href="{% url 'accessories' %}">
+              <img src="{% static 'pics/school_b.png' %}" alt="accessories" width="280" height="280">>
+              </a>
+
+
+        </div>
         </center>
     </body>
 

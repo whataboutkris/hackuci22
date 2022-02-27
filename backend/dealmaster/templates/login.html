@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link  rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-        <title>DealMaster</title>
-        <style>
-            .center {
-              text-align: center;
-            }
-            </style>
-    </head>
-  
-      <body>
-          <input type="text" value="username" placeholder="Enter Username"/>
-          <input type="password" value="password" placeholder="Enter password"/>
-          <input type="submit" value="Login"/>
-      </body>
+{% extends 'index.html' %}
 
+{% load static %}
+{% block content %}
       <div class="post-content">
         <div class="center">
-          <h1><img src="Dealmaster.png" alt="Title Page!"></h2>
+          <h1><img src="{% static 'pics/Dealmaster.png' %}" alt="Title Page!"></h2>
         </div>
       </div>
 
-    <body>
-        <div class = "center">
+     <head>
+            <link  rel="stylesheet" href="{% static 'styles/login.css' %}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+            <title>DealMaster</title>
+            <style>
+                .center {
+                  text-align: center;
+                }
+                </style>
+        </head>
 
-            Log In Page
-
+      <form action="action_page.php" method="post">
+        {% csrf_token %}
+        <div class="imgcontainer">
+          <img src="{% static 'pics/login.png' %}" alt="Laptops" width="280" height="280">
         </div>
+        <div class = "center">
+          <h1 style="font-size:30px;">Login</h1>
+      </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div style = "position:relative; left:1400px; top:-30px;
+          <span class="psw"> <a href="register.html">Register</a>
+            </span>
+        </div>
+      </form>
 
-</body>
-</html>
+
+{% endblock content %}

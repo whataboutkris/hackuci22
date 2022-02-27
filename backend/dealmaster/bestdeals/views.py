@@ -20,6 +20,9 @@ def search_results(request):
         return render(request, 'main.html')
 
 
+
+
+
 def cars_view(request):
 
     context = {'cars': key_dics.car}
