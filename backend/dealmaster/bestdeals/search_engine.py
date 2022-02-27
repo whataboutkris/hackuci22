@@ -1,3 +1,4 @@
+import urllib.parse
 from urllib.parse import urlparse
 
 from googlesearch import search
@@ -21,7 +22,7 @@ def key_generator(key_words):
         print('\n')
         print(item_list, '\n')
 
-        for model in item_list[item]:
+        for model in item_list:
             key_phrase = key_words + ' ' + model + ' sales'
             key_phrases.append(key_phrase)
 
@@ -52,7 +53,11 @@ def key_generator(key_words):
 
 def search_best_deal(query):
     links = dict()
+
+    # limit key-plhrases list to 5  to prevent slowdown
+    # for q in query:
     for i in search(query, tld="co.in", num=20, pause=2):
+        # url = urllib.parse.quote(str(i))
         url = urlparse(i)
         homepage = url.netloc
         # print(type(i))
@@ -67,18 +72,18 @@ def search_best_deal(query):
     return links
 
 
-# test1 = 'car toyota'
-# test2 = 'books'
-# test3 = 'nothing'
-#
-#
-# result1 = key_generator(test1)
-# result_search = search_best_deal('car toyota corolla best price')
+test1 = 'car toyota'
+test2 = 'books'
+test3 = 'nothing'
+
+
+result1 = key_generator(test1)
+result_search = search_best_deal('car toyota corolla best price')
 # result3 = search_best_deal(key_generator(test1))
-#
+# #
 # print('Test 1 -------------')
 # print(result1, '\n\n')
-# print('Test 2 -------------')
-# print(result_search, '\n\n')
+print('Test 2 -------------')
+print(result_search, '\n\n')
 # print('Test 3 -------------')
 # print(result3, '\n\n')
