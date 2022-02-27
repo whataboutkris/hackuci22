@@ -52,7 +52,8 @@ def key_generator(key_words):
 
 def search_best_deal(query):
     links = dict()
-    for i in search(query, tld="co.in", num=20, pause=2):
+    modified_query = query + ' sales'
+    for i in search(modified_query, tld="co.in", num=20, pause=2):
         url = urlparse(i)
         homepage = url.netloc
         # print(type(i))
