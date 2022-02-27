@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # User Apps
-    'bestdeals.apps.BestdealsConfig'
+    'bestdeals.apps.BestdealsConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
