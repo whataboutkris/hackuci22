@@ -1,12 +1,12 @@
 from urllib.parse import urlparse
 
 from googlesearch import search
-from .key_dics import car, book_genres, laptop, shoes
+from . import key_dics
 
 
 saving_keys = ['best price', 'best deal', 'sales']
 
-categories = {'books': book_genres, 'car': car, 'shoes': shoes, 'laptop': laptop}
+# categories = {'books': book_genres, 'car': car, 'shoes': shoes, 'laptop': laptop}
 
 
 def key_generator(key_words):
@@ -17,7 +17,7 @@ def key_generator(key_words):
     print(type(item))
 
     if item == 'car':
-        item_list = car[key_words[(key_words.find(' ') + 1):]]
+        item_list = key_dics.car[key_words[(key_words.find(' ') + 1):]]
 
         print(key_words[(key_words.find(' ') + 1):])
         print('\n')
@@ -30,7 +30,13 @@ def key_generator(key_words):
                 key_phrases.append(key_phrase)
 
     else:
-        item_list = categories[item]
+        item_list = []
+        if item == 'books':
+            item_list = key_dics.book_genres
+        elif item == 'shoes':
+            item_list = key_dics.shoes
+        elif item == 'laptop':
+            item_list = key_dics.laptop
 
         print(item_list)
 

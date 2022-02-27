@@ -2,6 +2,16 @@
 {% extends 'index.html' %}
 
 {% block content %}
+    <center>
+    <h1> Your best deals </h1>
+    {% if results %}
+    {% for key, value in results.items %}
+    <p>Seller: <a href="{{key}}">{{key}}</a><span>
+        Item: <a href="{{value}}">{{value}}</a></span></p>
+    {% endfor %}
+    {% else %}
+    <p>Best Deals Cannot Be Found</p>
 
-
+    {% endif %}
+    </center>
 {% endblock content %}

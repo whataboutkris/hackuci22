@@ -20,7 +20,22 @@ def search_results(request):
         return render(request, 'main.html')
 
 
+def car_view(request):
+    context = {'laptops': key_dics.car}
+    return render(request, 'laptops.html', context)
+
+
 def laptop_view(request):
+    context = {'laptops': key_dics.laptop}
+    return render(request, 'laptops.html', context)
+
+
+def accessories_view(request):
+    context = {'laptops': key_dics.laptop}
+    return render(request, 'laptops.html', context)
+
+
+def books_view(request):
     context = {'laptops': key_dics.laptop}
     return render(request, 'laptops.html', context)
 

@@ -7,7 +7,7 @@ urlpatterns = [
     path('home/', views.home_view, name="home"),
     path('about/', views.about_view, name="about"),
     path('search/', views.search_results, name="search"),
-    path('bestdeals/', views.laptop_view, name="bestdeals"),
+    path('bestdeals/', views.bestdeals_view, name="bestdeals"),
 
     # Sub pages for buttons
     path('laptop/', views.laptop_view, name="laptops"),

@@ -9,7 +9,7 @@ car = {'toyota': ['corolla', 'camry', 'mirai', 'prius', 'avalon', 'rav4', 'tundr
 laptop = ['samsung', 'apple', 'msi', 'asus', 'acer',
           'hp', 'dell', 'microsoft', 'chrome book']
 
-shoes = ['nike', 'adidas', 'vans', 'converse', 'sketcher']
+accessories = ['pen', 'rulers', 'calculator', 'pencils', 'eraser']
 
 book_genres = ['novel', 'sci-fi', 'horror', 'mystery',
                'comic', 'humour', 'religion', 'self-help'
