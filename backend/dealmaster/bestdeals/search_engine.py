@@ -4,8 +4,6 @@ from googlesearch import search
 from . import key_dics
 
 
-saving_keys = ['best price', 'best deal', 'sales']
-
 # categories = {'books': book_genres, 'car': car, 'shoes': shoes, 'laptop': laptop}
 
 
@@ -23,28 +21,24 @@ def key_generator(key_words):
         print('\n')
         print(item_list, '\n')
 
-        for idx, model in enumerate(item_list):
-
-            for saving_key in saving_keys:
-                key_phrase = key_words + ' ' + model + ' ' + saving_key
-                key_phrases.append(key_phrase)
+        for model in item_list[item]:
+            key_phrase = key_words + ' ' + model + ' sales'
+            key_phrases.append(key_phrase)
 
     else:
         item_list = []
         if item == 'books':
             item_list = key_dics.book_genres
         elif item == 'shoes':
-            item_list = key_dics.shoes
+            item_list = key_dics.accessories
         elif item == 'laptop':
             item_list = key_dics.laptop
 
         print(item_list)
 
         for item in item_list:
-
-            for saving_key in saving_keys:
-                key_phrase = key_words + ' ' + item + ' ' + saving_key
-                key_phrases.append(key_phrase)
+            key_phrase = key_words + ' ' + item + ' sales'
+            key_phrases.append(key_phrase)
 
     return key_phrases
 
@@ -58,8 +52,7 @@ def key_generator(key_words):
 
 def search_best_deal(query):
     links = dict()
-    modified_query = query + ' sales'
-    for i in search(modified_query, tld="co.in", num=20, pause=2):
+    for i in search(query, tld="co.in", num=20, pause=2):
         url = urlparse(i)
         homepage = url.netloc
         # print(type(i))

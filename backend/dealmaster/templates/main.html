@@ -19,7 +19,12 @@
 
         {% include 'search.html' %}
 
-        <a href="{% url 'laptops' %}">laptop</a>
+        <center>
+            <a href="{% url 'laptops' %}">laptop</a>
+            <a href="{% url 'cars' %}">car</a>
+            <a href="{% url 'accessories' %}">accessories</a>
+            <a href="{% url 'books' %}">books</a>
+        </center>
     </body>
 
 {% endblock content%}

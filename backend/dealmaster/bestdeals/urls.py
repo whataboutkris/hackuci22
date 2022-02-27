@@ -10,8 +10,8 @@ urlpatterns = [
     path('bestdeals/', views.bestdeals_view, name="bestdeals"),
 
     # Sub pages for buttons
-    path('laptop/', views.laptop_view, name="laptops"),
-    path('car/', views.laptop_view, name="cars"),
-    path('accessories/', views.laptop_view, name="accessories"),
-    path('books/', views.laptop_view, name="books"),
+    path('laptop/', views.laptops_view, name="laptops"),
+    path('car/', views.cars_view, name="cars"),
+    path('accessories/', views.accessories_view, name="accessories"),
+    path('books/', views.books_view, name="books"),
 ]
