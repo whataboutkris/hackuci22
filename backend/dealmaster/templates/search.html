@@ -1,24 +1,11 @@
 <!DOCTYPE html>
-{% extends 'index.html' %}
-{% load static %}
-{% block content %}
 
 
-        <div class="input-wrapper">
-          <form action="{% url 'search' %}"> <!--usually php for searching from database-->
-          <button class="btn-search"><i class="fas fa-search"></i></button>
-          <input type="text" name="search_querry"  class="input-search"
-                 value={{search_query}} placeholder="Type to Search...">
+<div class="input-wrapper">
+  <form action="{% url 'search' %}" method="get"> <!--usually php for searching from database-->
+      {% csrf_token %}
+  <button class="btn-search"><i class="fas fa-search"></i></button>
+  <input type="text" class="input-search" placeholder="Search Your Deals..." name="search_query">
 
-              <!-- add request for backends -->
-          </form>
-        </div>
-
-        <div class = "center">
-
-            info will pop up here!
-            
-
-        </div>
-
-{% endblock content %}
+  </form>
+</div>
