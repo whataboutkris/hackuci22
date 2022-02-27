@@ -19,10 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    # path('', include('bestdeals.urls')),
-    # path
-=======
     path('', include('bestdeals.urls')),
->>>>>>> 7c1f65ef15906d62b506127bb973011d503d81f2
+
 ]
