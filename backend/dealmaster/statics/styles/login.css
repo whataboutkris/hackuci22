@@ -77,11 +77,6 @@ body {
     bottom: -150px;
   }
 
-  .troll {
-    max-width: 150px;
-    max-height: 150px;
-}
-
 
 
 
@@ -122,17 +117,17 @@ body {
     background-color: #f44336;
   }
   
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
   
   /* Add padding to containers */
   .container {

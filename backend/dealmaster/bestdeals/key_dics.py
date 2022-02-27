@@ -1,27 +1,15 @@
 
-car = {'Toyota': ['corolla', 'camry', 'mirai', 'prius', 'avalon', 'rav4', 'tundra', 'tacoma', 'sienna'],
-       'Nissan': ['versa', 'sentra', 'altima', 'maxima', 'leaf', 'kicks', 'rogue', 'murano'],
-       'Honda': ['civic', 'accord', 'odyssey'],
-       'Chevrolet': ['malibu', 'sparks', 'colorado', 'silverado', 'trax', 'trailblazer', 'equinox'],
-       'Ford': ['focus', 'escor', 'fiesta', 'modeo'],
-       # 'Mercedes-Benz': [],
-       # 'Jeep': [],
-       # 'Subaru': [],
-       # 'Cadillac': [],
-       # 'Volkswagen': [],
-       # 'Lexus': []
-       }
-laptop = ['Samsung',
-          'Apple',
-          'MSI',
-          'Asus',
-          'Acer',
-          'Hp',
-          'Dell',
-          'Microsoft',
-          'Chrome Book']
+car = {'toyota': ['corolla', 'camry', 'mirai', 'prius', 'avalon', 'rav4', 'tundra', 'tacoma', 'sienna'],
+       'nissan': ['versa', 'sentra', 'altima', 'maxima', 'leaf', 'kicks', 'rogue', 'murano'],
+       'honda': ['civic', 'accord', 'odyssey'],
+       'chevrolet': ['malibu', 'sparks', 'colorado', 'silverado', 'trax', 'trailblazer', 'equinox'],
+       'ford': ['focus', 'escor', 'fiesta', 'modeo'],
 
-shoes = ['Nike', 'Adidas', 'Vans', 'Converse', 'Sketcher']
+       }
+laptop = ['samsung', 'apple', 'msi', 'asus', 'acer',
+          'hp', 'dell', 'microsoft', 'chrome book']
+
+accessories = ['pen', 'rulers', 'calculator', 'pencils', 'eraser']
 
 book_genres = ['novel', 'sci-fi', 'horror', 'mystery',
                'comic', 'humour', 'religion', 'self-help'

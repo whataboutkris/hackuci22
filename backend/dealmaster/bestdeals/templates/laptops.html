@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+
+{% block content %}
+<body>
+    <div class = "center">
+
+        <form action="{% url 'bestdeals' %}" method="get">
+            {% for brand in laptops %}
+            <input type="submit" value="{{brand}}" />
+            {% endfor %}
+        </form>
+
+    </div>
+
+</body>
+
+{% endblock content %}
