@@ -1,3 +1,5 @@
+from urllib.parse import urlparse
+
 from googlesearch import search
 from .key_dics import car, book_genres, laptop, shoes
 
@@ -40,10 +42,26 @@ def key_generator(key_words):
 
     return key_phrases
 
-# def search_request(request):
-#     url_list = []
-#     for j in search(request, tld="co.in", num=10, stop=10, pause=2):
-#         url_list.append(j)
-#
-#     return url_list
 
+"""
+    Description: look for top 10 different websites which sell the specific item in query
+    Parameters: query is a string describing the item
+    Return: a dictionary, key is the homepage of that website, value is the url that user wants to see
+"""
+
+
+def search_best_deal(query):
+    links = dict()
+    for i in search(query, tld="co.in", num=20, pause=2):
+        url = urlparse(i)
+        homepage = url.netloc
+        # print(type(i))
+        # print(type(homepage))
+
+        if homepage not in links:
+            links[homepage] = i
+
+        if len(links) >= 10:
+            break
+
+    return links
