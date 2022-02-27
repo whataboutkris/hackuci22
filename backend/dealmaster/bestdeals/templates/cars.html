@@ -6,6 +6,7 @@
     <div class = "center">
 
         <form action="{% url 'bestdeals' %}" method="get">
+            {% csrf_token %}
             {% for brand in cars%}
             <input type="submit" value="{{brand}}" />
             {% endfor %}
