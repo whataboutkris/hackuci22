@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+
+{% block content %}
+    <center>
+    {% if results %}
+        <h1>Your Best Deals: </h1>
+        {% for key, value in results.items %}
+        <p>Seller: <a href="{{key}}">{{key}}</a><span>
+            Item: <a href="{{value}}">{{value}}</a></span></p>
+        {% endfor %}
+    {% else %}
+        <p>Best Deals Cannot Be Found</p>
+
+    </center>
+    {% endif %}
+{% endblock content %}
