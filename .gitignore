@@ -1,2 +1,5 @@
 .idea/*
+.vscode/*
+
+backend/hackuci2022/*
 backend/venv/*
